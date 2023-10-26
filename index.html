@@ -543,84 +543,111 @@
         </div>
         <div class="subscribe-container">
           <p class="subscribe-text">Subscribe</p>
-          <form>
-            <label>
+          <form class="subscribe-form">
+            <label class="subscribe-label">
               Email
-              <input type="email" name="email" placeholder="E-mail" />
+              <input
+                class="subscribe-input"
+                type="email"
+                name="email"
+                placeholder="E-mail"
+              />
             </label>
+            <button class="subscribe-button" type="submit">
+              Subscribe
+              <svg class="subscribe-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-telegram"></use>
+              </svg>
+            </button>
           </form>
-          <div class="subscribe-cont">
-<button class="subscribe-button" type="submit">Subscribe</button>
-<svg class="icon-socials" width="24" height="24">
-  <use href="./images/icons.svg#icon-telegram"></use>
-</svg>
-</div>
         </div>
       </div>
     </footer>
     <!-- BACKDROP -->
-    <backdrop>
-      <div class="modal-backdrop">
-        <div class="modal">
-          <div class="modal-close-btn">
-            <button type="submit" class="modal-close-button"></button>
-            <svg class="close-cross" width="8" height="8">
-              <use href="./images/icons.svg#icon-close-black-18dp-2-1"></use>
-            </svg>
-          </div>
-          <p class="form-text">Leave your contacts and we will call you back</p>
-          <form>
-            <label class="form-container"
-              >Name
-              <div class="icon-cont">
-                <input class="form-input" name="username" placeholder="" />
-                <svg class="form-icon" width="18" height="18">
-                  <use href="./images/icons.svg#icon-person-black-18dp-1"></use>
-                </svg>
-              </div>
-            </label>
-            <label class="form-container">
-              Phone
+
+    <div class="modal-backdrop">
+      <div class="modal">
+        <button type="button" class="modal-close-button">
+          <svg class="close-cross" width="8" height="8">
+            <use href="./images/icons.svg#icon-close-black-18dp-2-1"></use>
+          </svg>
+        </button>
+        <p class="form-text">Leave your contacts and we will call you back</p>
+        <form class="modal-form">
+          <div class="modal-container">
+            <label class="form-container" for="user-name"> Name </label>
+            <div class="form-cont">
               <input
                 class="form-input"
+                id="user-name"
+                name="user-name"
+                type="text"
+                placeholder=""
+              />
+              <svg class="form-icon" width="18" height="24">
+                <use href="./images/icons.svg#icon-person-black-18dp-1"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="modal-container">
+            <label class="form-container" for="user-phone"> Phone </label>
+            <div class="form-cont">
+              <input
+                class="form-input"
+                id="user-phone"
                 type="tel"
                 name="contact_tel"
-                required
               />
               <svg class="form-icon" width="18" height="24">
                 <use href="./images/icons.svg#icon-phone-black-18dp-1"></use>
               </svg>
-            </label>
-            <label class="form-container">
-              Email
-              <input class="form-input" type="email" name="email" />
+            </div>
+          </div>
+          <div class="modal-container">
+            <label class="form-container" for="user-email"> Email </label>
+            <div class="form-cont">
+              <input
+                class="form-input"
+                id="user-email"
+                type="email"
+                name="email"
+              />
               <svg class="form-icon" width="18" height="24">
                 <use href="./images/icons.svg#icon-email-black-18dp-1"></use>
               </svg>
-            </label>
-            <label class="form-container"
-              >Comment
-              <input
-                class="form-input"
-                type="text"
-                name="comment"
-                placeholder="Text input"
-              />
-            </label>
-
-            <div class="checkbox-cont">
-              <input type="checkbox" name="form-input" />
-              <label class="form-container"
-                ><p>
-                  I accept the terms and conditions of the
-                  <span class="blue">Privacy Policy</span>
-                </p>
-              </label>
             </div>
-            <button type="submit" class="submit-btn" disabled>Send</button>
-          </form>
-        </div>
+          </div>
+          <div class="modal-container-text">
+            <label class="form-container" for="user-comment"> Comment </label>
+            <textarea
+              class="form-input-text"
+              id="user-comment"
+              name="user-comment"
+              placeholder="Text input"
+            ></textarea>
+          </div>
+
+          <div class="checkbox-cont">
+            <input
+              class="visually-hidden"
+              id="user-privacy"
+              type="checkbox"
+              name="user-privacy"
+              value="true"
+            />
+            <label class="checkbox-label" for="user-privacy">
+              <span class="checkbox-icon">
+                <svg class="chekbox-form-icon" width="10" height="8">
+                  <use href="./images/icons.svg#icon-Property-1click"></use>
+                </svg>
+              </span>
+              I accept the terms and conditions of the
+              <a class="checkbox-link" href="">Privacy Policy</a>
+            </label>
+          </div>
+          <button type="submit" class="submit-btn" disabled>Send</button>
+        </form>
       </div>
-    </backdrop>
+    </div>
   </body>
 </html>
