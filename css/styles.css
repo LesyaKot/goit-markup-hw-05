@@ -568,20 +568,27 @@ footer .social-links {
   background-color: #e7e9fc;
   display: flex;
   justify-content: center;
-  text-align: center;
+  align-items: center;
   cursor: pointer;
   background-color: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   padding: 0;
+  border-radius: 50%;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-modal-close-button:hover,
-modal-close-button:focus {
+.modal-close-button:hover,
+.modal-close-button:focus {
   fill: #404bbf;
   border: none;
+}
+.modal-close-button:hover .close-cross,
+.modal-close-button:focus .close-cross{
+  fill: #ffffff;
 }
 .close-cross {
   width: 8px;
   height: 8px;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  
 }
 .close-cross:hover,
 .close-cross:focus {
