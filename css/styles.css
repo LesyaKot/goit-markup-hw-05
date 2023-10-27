@@ -666,13 +666,12 @@ footer .social-links {
   position: absolute;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.form-input:focus .form-icon {
+
+.form-input:focus + .form-icon{
   fill: #4d5ae5;
 }
 .checkbox-cont {
   margin-bottom: 24px;
-}
-.visually-hidden {
 }
 .submit-btn {
   display: block;
@@ -693,8 +692,7 @@ footer .social-links {
   margin-top: 24px;
   margin-left: 0 auto;
   margin-right: 0 auto;
-  padding: 16px 32px;
- 
+  padding: 16px 32px; 
 }
 .checkbox-label {
   font-size: 12px;
@@ -715,13 +713,12 @@ footer .social-links {
   justify-content: center;
   fill: transparent;
 }
-.visually-hidden:checked 
-+ .checkbox-label
-> .chekbox-form-icon {
+.user-privacy:checked + .checkbox-label > .chekbox-icon {
   background-color: #404bbf;
   border: none;
   fill: #f4f4fd;
 }
+
 .checkbox-link {
   color: #4d5ae5;
 }
